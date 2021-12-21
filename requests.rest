@@ -1,0 +1,33 @@
+GET http://localhost:3000/posts
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+
+    "username":"nada"
+}
+
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmFkYSIsImlhdCI6MTYzODM2MTQ4NCwiZXhwIjoxNjM4MzYxNTA0fQ.ozo22XCeDJjJI2EnOKD2-2hsVU7Xz3ih07K1o-AxK6g
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token":  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmFkYSIsImlhdCI6MTYzODM2MTQyN30.H2A9vGK1aWtgXCUUGArKvD3PB3fs73qddQHlj60D8Y4"
+}
+###
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmFkYSIsImlhdCI6MTYzODM2MTQyN30.H2A9vGK1aWtgXCUUGArKvD3PB3fs73qddQHlj60D8Y4"
+}
